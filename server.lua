@@ -10,11 +10,11 @@ StartTimer = function()
               Citizen.Wait(60000)
         local xPlayers = ESX.GetPlayers()
         for _, xPlayer in pairs(xPlayers) do
-          MySQL.Async.fetchAll('SELECT * FROM users WHERE vrijeme = vrijeme', {
+          MySQL.Async.fetchAll('SELECT * FROM users WHERE time = time', {
           }, function(result)
               if result then
                   MySQL.Sync.execute(
-                      'UPDATE users SET vrijeme = vrijeme + 1',
+                      'UPDATE users SET time = time + 1',
                       {
           
                          
