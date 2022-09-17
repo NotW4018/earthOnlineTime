@@ -1,0 +1,1 @@
+ALTER TABLE users ADD `time` INT(11) NOT NULL DEFAULT '0';
